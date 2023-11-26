@@ -22,6 +22,8 @@ jobs:
             region: "CHO"
           - model: "SM-M526BR"
             region: "BTU"
+          - model: "SM-A736B"
+            region: "ZTA"
 
     steps:
     - name: Checkout repo
