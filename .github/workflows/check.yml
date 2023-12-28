@@ -56,7 +56,19 @@ jobs:
 
     - name: Fetch firmware
       if: env.need_update == 1
-      run: samfirm -m ${{ matrix.model }} -r ${{ matrix.region }}
+      run: |
+       if [[ "${{ matrix.model }}" == "SM-A528N" ]]; then
+           imei="354049881234560"
+       elif [[ "${{ matrix.model }}" == "SM-A528B" ]]; then
+           imei="352599501234566"
+       elif [[ "${{ matrix.model }}" == "SM-M526BR" ]]; then
+           imei="355568761234563"
+       elif [[ "${{ matrix.model }}" == "SM-M526B" ]]; then
+           imei="358320801234568"
+       elif [[ "${{ matrix.model }}" == "SM-A736B" ]]; then
+           imei="352828291234563"
+       fi
+       samfirm -m ${{ matrix.model }} -r ${{ matrix.region }} -i $imei
 
     - name: Get path of files
       if: env.need_update == 1
