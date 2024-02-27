@@ -64,7 +64,7 @@ jobs:
        elif [[ "${{ matrix.model }}" == "SM-M526BR" ]]; then
            imei="355568761234563"
        elif [[ "${{ matrix.model }}" == "SM-M526B" ]]; then
-           imei="358320801234568"
+           imei="358205231234561"
        elif [[ "${{ matrix.model }}" == "SM-A736B" ]]; then
            imei="352828291234563"
        fi
