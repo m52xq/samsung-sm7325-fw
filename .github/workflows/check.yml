@@ -19,7 +19,7 @@ jobs:
           - model: "SM-A528N"
             region: "KOO"
           - model: "SM-M526B"
-            region: "CHO"
+            region: "ZTO"
           - model: "SM-M526BR"
             region: "BTU"
           - model: "SM-A736B"
